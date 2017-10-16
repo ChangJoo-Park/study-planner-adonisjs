@@ -1,12 +1,12 @@
 'use strict'
 
 class RegisterController {
-  async index () {
-
+  async index ({ request, view }) {
+    return view.render('register-index')
   }
 
-  async doRegister () {
-
+  async doRegister ({ request, response }) {
+    console.log("hello!!!")
   }
 }
 
