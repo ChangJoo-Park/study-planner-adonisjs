@@ -5,8 +5,9 @@ class RegisterController {
     return view.render('register-index')
   }
 
-  async doRegister ({ request, response }) {
-    console.log("hello!!!")
+  async doRegister ({ request, response, view }) {
+    const { username, email, password } = request.only(['username', 'email', 'password'])
+    return view.render('auth-index')
   }
 }
 
