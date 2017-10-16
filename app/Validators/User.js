@@ -3,7 +3,8 @@
 class User {
   get rules () {
     return {
-      // validation rules
+      email: 'required|email|unique:users,email',
+      password: 'required|min:6'
     }
   }
 }
