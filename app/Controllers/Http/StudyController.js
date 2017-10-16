@@ -1,7 +1,8 @@
 'use strict'
 
 class StudyController {
-  async index () {
+  async index ({ request, response, view }) {
+    return view.render('study-index')
   }
 
   async create () {
