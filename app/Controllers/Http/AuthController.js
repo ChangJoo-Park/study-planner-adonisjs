@@ -3,7 +3,7 @@
 class AuthController {
   // Show Page
   async index ({ view }) {
-
+    return view.render('auth-index')
   }
 
   // Do login
