@@ -22,4 +22,6 @@ Route.get('/login', 'AuthController.index')
 Route.post('/login', 'AuthController.login')
 
 Route.get('/register', 'RegisterController.index')
-Route.post('register', 'RegisterController.doRegister').as('storeUser')
+Route
+.post('register', 'RegisterController.doRegister')
+.as('storeUser')
