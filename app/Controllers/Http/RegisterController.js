@@ -1,4 +1,5 @@
 'use strict'
+const User = use('App/Models/User')
 
 class RegisterController {
   async index ({ request, view }) {
@@ -6,8 +7,14 @@ class RegisterController {
   }
 
   async doRegister ({ request, response, view }) {
-    const { username, email, password } = request.only(['username', 'email', 'password'])
-    return view.render('auth-index')
+    const userData = request.only(['username', 'email', 'password'])
+    try {
+      const newUser = await User.create(userData)
+      return response.route('AuthController.index')
+    } catch (e) {
+      return response.route('RegisterController.index')
+    }
+
   }
 }
 
