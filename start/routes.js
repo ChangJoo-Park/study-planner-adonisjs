@@ -17,3 +17,9 @@ const Route = use('Route')
 
 Route.on('/').render('home')
 Route.resource('studies', 'StudyController')
+
+Route.get('/login', 'AuthController.index')
+Route.post('/login', 'AuthController.login')
+
+Route.get('/register', 'RegisterController.index')
+Route.post('register', 'RegisterController.doRegister')
