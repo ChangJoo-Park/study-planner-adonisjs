@@ -20,6 +20,7 @@ Route.resource('studies', 'StudyController')
 
 Route.get('/login', 'AuthController.index')
 Route.post('/login', 'AuthController.login')
+.as('login')
 
 Route.get('/register', 'RegisterController.index')
 Route
