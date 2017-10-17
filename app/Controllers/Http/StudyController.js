@@ -2,7 +2,7 @@
 
 class StudyController {
   async index ({ request, response, view }) {
-    return view.render('study-index')
+    return view.render('studies/index')
   }
 
   async create () {
