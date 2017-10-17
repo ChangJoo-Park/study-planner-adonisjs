@@ -16,7 +16,7 @@
 const Route = use('Route')
 
 Route.on('/').render('home')
-Route.resource('studies', 'StudyController')
+Route.resource('studies', 'StudyController').middleware(['auth'])
 
 Route.get('/login', 'AuthController.index')
 Route.post('/login', 'AuthController.login')
