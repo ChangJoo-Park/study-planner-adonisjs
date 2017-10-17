@@ -3,8 +3,15 @@
 <form method="POST" action="{{ route('storeUser') }}">
   {{ error }}
   {{ csrfField() }}
-  <input type="text" name="username" placeholder="UserName">
-  <input type="email" name="email" placeholder="Email">
-  <input type="password" name="password" placeholder="Password">
+  <div>
+    <input type="text" name="username" placeholder="UserName">
+  </div>
+
+  <div>
+    <input type="email" name="email" placeholder="Email">
+  </div>
+  <div>
+    <input type="password" name="password" placeholder="Password">
+  </div>
   <input type="submit">
 </form>
