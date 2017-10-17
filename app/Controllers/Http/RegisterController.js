@@ -8,11 +8,14 @@ class RegisterController {
 
   async doRegister ({ request, response, view }) {
     const userData = request.only(['username', 'email', 'password'])
+
+    // TODO: Add Validation
+
     try {
       const newUser = await User.create(userData)
       return response.route('AuthController.index')
     } catch (e) {
-      return response.route('RegisterController.index')
+      return view.render('register-index', { error: 'Registration Failed' })
     }
 
   }
