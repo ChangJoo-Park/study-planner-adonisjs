@@ -10,8 +10,12 @@
     <div class="logo"></div>
     <div class="title"></div>
     <div class="subtitle"><p>AdonisJs simplicity will make you feel confident about your code</p></div>
-    <a href="/login">Login</a>
-    <a href="/register">Register</a>
+    @loggedIn
+      <a href="/studies">Go to App</a>
+    @else
+      <a href="/login">Login</a>
+      <a href="/register">Register</a>
+    @endloggedIn
   </section>
 </body>
 </html>
