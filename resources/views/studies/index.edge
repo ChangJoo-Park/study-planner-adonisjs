@@ -1,6 +1,20 @@
 @layout('layouts/app')
 
+@section('hero')
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          Hello, {{ auth.user.username }} !
+        </h1>
+        <h2 class="subtitle">
+          You have no plan
+        </h2>
+      </div>
+    </div>
+  </section>
+@endsection
+
 @section('content')
   <p> Content area </p>
-  <p>{{auth.user.username}}</p>
 @endsection
