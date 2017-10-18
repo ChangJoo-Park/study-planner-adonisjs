@@ -1,19 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300');
-
-html, body {
-  padding: 0;
-  margin: 0;
+html, body, #app {
   height: 100%;
-  width: 100%;
 }
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
+#app {
+  min-height: 100%;
 }
