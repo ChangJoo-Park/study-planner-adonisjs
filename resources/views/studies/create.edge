@@ -2,4 +2,14 @@
 
 @section('content')
   <h1>Create a new Study</h1>
+  <form method="POST" action="{{ route('StudyController.store') }}">
+    {{ csrfField() }}
+    <div>
+      <input type="text" name="name">
+    </div>
+    <div>
+      <textarea name="description"></textarea>
+    </div>
+    <input type="submit">
+  </form>
 @endsection
