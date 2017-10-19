@@ -17,7 +17,23 @@
 
 @section('content')
   <p> Content area </p>
-  <div>
-    {{ studies }}
-  </div>
+
+  @if(studies.length == 0)
+  {{--  Empty Study State  --}}
+    <div>
+      <h1>You don't have any Study.
+        <small>
+          <a href="{{ route('StudyController.create') }}">Create New One?</a>
+        </small>
+      </h1>
+    </div>
+  @else
+  {{--  Has Studies  --}}
+    <a href="{{ route('StudyController.create') }}">Add New One</a>
+    <ul>
+    @each(study in studies)
+      <li> {{ study.name }} </li>
+    @endeach
+    </ul>
+  @endif
 @endsection
