@@ -29,6 +29,7 @@
     </div>
   @else
   {{--  Has Studies  --}}
+    <a href="{{ route('StudyController.create') }}">Add New One</a>
     <ul>
     @each(study in studies)
       <li> {{ study.name }} </li>
