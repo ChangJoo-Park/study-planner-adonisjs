@@ -17,7 +17,17 @@
 
 @section('content')
   <p> Content area </p>
-  <div>
-    {{ studies }}
-  </div>
+
+  @if(studies.length == 0)
+  {{--  Empty Study State  --}}
+    <div>
+      <h1>No Study</h1>
+    </div>
+  @else
+  {{--  Has Studies  --}}
+    <div>
+      {{ studies }}
+    </div>
+  @endif
+
 @endsection
