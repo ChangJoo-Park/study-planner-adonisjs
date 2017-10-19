@@ -6,7 +6,6 @@ class AuthController {
     try {
       await auth.check()
     } catch (error) {
-      console.log(error)
       return view.render('auth-index')
     }
   }
@@ -14,7 +13,6 @@ class AuthController {
   // Do login
   async login ({ request, auth, response }) {
     const { email, password } = request.all()
-    console.log(email, password)
 
     await auth.attempt(email, password)
 
