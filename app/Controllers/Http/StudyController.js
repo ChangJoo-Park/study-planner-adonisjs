@@ -8,7 +8,8 @@ class StudyController {
     return view.render('studies/index', { studies: studies.rows })
   }
 
-  async create () {
+  async create ({ view }) {
+    return view.render('studies/create')
   }
 
   async store () {
