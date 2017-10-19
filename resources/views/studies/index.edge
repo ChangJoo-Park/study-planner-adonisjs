@@ -21,13 +21,18 @@
   @if(studies.length == 0)
   {{--  Empty Study State  --}}
     <div>
-      <h1>No Study</h1>
+      <h1>You don't have any Study.
+        <small>
+          <a href="/studies/create">Create New One?</a>
+        </small>
+      </h1>
     </div>
   @else
   {{--  Has Studies  --}}
-    <div>
-      {{ studies }}
-    </div>
+    <ul>
+    @each(study in studies)
+      <li> {{ study.name }} </li>
+    @endeach
+    </ul>
   @endif
-
 @endsection
