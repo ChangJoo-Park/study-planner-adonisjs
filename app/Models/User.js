@@ -34,6 +34,9 @@ class User extends Model {
     return this.hasMany('App/Models/Study')
   }
 
+  iterations () {
+    return this.hasMany('App/Models/Iteration')
+  }
 }
 
 module.exports = User
