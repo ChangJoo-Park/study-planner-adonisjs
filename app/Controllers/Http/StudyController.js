@@ -27,7 +27,10 @@ class StudyController {
     }
   }
 
-  async show () {
+  async show ({ request, response, view, auth, params }) {
+    const study = await Study.find(params.id)
+    // TODO: Add error handling
+    return view.render('studies/show', { study })
   }
 
   async edit () {
