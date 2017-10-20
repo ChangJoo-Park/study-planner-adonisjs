@@ -8,6 +8,9 @@ class Study extends Model {
     return this.belongsTo('App/Models/User')
   }
 
+  iterations () {
+    return this.hasMany('App/Models/Iteration')
+  }
 }
 
 module.exports = Study
