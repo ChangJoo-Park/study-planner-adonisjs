@@ -5,11 +5,15 @@ class IterationController {
 
   }
 
+  async create () {
+    
+  }
+    
   async store () {
 
   }
 
-  async update () {
+  async edit () {
 
   }
 
