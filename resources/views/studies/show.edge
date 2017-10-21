@@ -3,4 +3,9 @@
 @section('content')
 <h1> {{ study.name }} </h1>
 <div>{{ study.description }}</div>
+
+<form method="POST" action="{{ route('IterationController.store', { study_id: study.id }) }}">
+  {{ csrfField() }}
+  <input type="submit">
+</form>
 @endsection
