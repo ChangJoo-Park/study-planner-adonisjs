@@ -6,6 +6,9 @@
 
 <form method="POST" action="{{ route('IterationController.store', { study_id: study.id }) }}">
   {{ csrfField() }}
+  <input type="text" name="name">
+  <input type="date" name="started_at">
+  <input type="date" name="ended_at">
   <input type="submit">
 </form>
 @endsection
