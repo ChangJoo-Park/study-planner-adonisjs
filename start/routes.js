@@ -16,7 +16,11 @@
 const Route = use('Route')
 
 Route.on('/').render('home')
-Route.resource('studies', 'StudyController').middleware(['auth'])
+
+Route.resource('study', 'StudyController').middleware(['auth'])
+Route.resource('study.iterations', 'IterationController')
+.only(['store', 'update', 'delete'])
+.middleware(['auth'])
 
 Route.get('/login', 'AuthController.index')
 Route.post('/login', 'AuthController.login')
