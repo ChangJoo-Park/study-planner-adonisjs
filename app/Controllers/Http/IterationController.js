@@ -1,28 +1,16 @@
 'use strict'
 
 class IterationController {
-  async index () {
-
-  }
-
-  async create () {
-    
-  }
-    
   async store () {
-
-  }
-
-  async edit () {
-
+    console.log('iteration store')
   }
 
   async update () {
-    
+
   }
-    
+
   async delete () {
-    
+
   }
 }
 
