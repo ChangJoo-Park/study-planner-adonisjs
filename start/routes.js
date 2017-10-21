@@ -18,7 +18,7 @@ const Route = use('Route')
 Route.on('/').render('home')
 
 Route.resource('study', 'StudyController').middleware(['auth'])
-Route.resource('study.iterations', 'IterationController')
+Route.resource('study.iteration', 'IterationController')
 .only(['store', 'update', 'delete'])
 .middleware(['auth'])
 
